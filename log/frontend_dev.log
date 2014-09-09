@@ -1,0 +1,44 @@
+Sep 09 10:52:02 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/frontend_dev.php" (/).
+Sep 09 10:52:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Sep 09 10:52:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 09 10:52:02 symfony [info] {sfWebDebugLogger} Configuration 85.01 ms (5)
+Sep 09 10:52:02 symfony [info] {sfWebDebugLogger} Factories 73.00 ms (1)
+Sep 09 10:53:14 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/frontend_dev.php" (/).
+Sep 09 10:53:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Sep 09 10:53:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 09 10:53:14 symfony [info] {sfWebDebugLogger} Configuration 6.00 ms (5)
+Sep 09 10:53:14 symfony [info] {sfWebDebugLogger} Factories 36.00 ms (1)
+Sep 09 10:53:17 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/frontend_dev.php" (/).
+Sep 09 10:53:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Sep 09 10:53:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 09 10:53:17 symfony [info] {sfWebDebugLogger} Configuration 6.00 ms (5)
+Sep 09 10:53:17 symfony [info] {sfWebDebugLogger} Factories 35.00 ms (1)
+Sep 09 10:56:40 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/frontend_dev.php" (/).
+Sep 09 10:56:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Sep 09 10:56:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 09 10:56:40 symfony [info] {sfWebDebugLogger} Configuration 3.00 ms (5)
+Sep 09 10:56:40 symfony [info] {sfWebDebugLogger} Factories 40.00 ms (1)
+Sep 09 10:56:53 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/frontend_dev.php" (/).
+Sep 09 10:56:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Sep 09 10:56:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 09 10:56:53 symfony [info] {sfWebDebugLogger} Configuration 4.00 ms (5)
+Sep 09 10:56:53 symfony [info] {sfWebDebugLogger} Factories 37.00 ms (1)
+Sep 09 11:14:30 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /job with parameters array (  'module' => 'job',  'action' => 'index',)
+Sep 09 11:14:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 09 11:14:30 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 09 11:14:30 symfony [info] {jobActions} Call "jobActions->executeIndex()"
+Sep 09 11:14:30 symfony [info] {jobActions} Forward to action "default/module"
+Sep 09 11:14:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 09 11:14:30 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 09 11:14:30 symfony [info] {defaultActions} Call "defaultActions->executeModule()"
+Sep 09 11:14:30 symfony [info] {sfPHPView} Render "C:\xampp\htdocs\symfony\lib\vendor\symfony\lib/controller/default/templates/moduleSuccess.php"
+Sep 09 11:14:30 symfony [info] {sfPHPView} Decorate content with "C:\xampp\htdocs\symfony\lib\vendor\symfony\lib\controller\default\templates/defaultLayout.php"
+Sep 09 11:14:30 symfony [info] {sfPHPView} Render "C:\xampp\htdocs\symfony\lib\vendor\symfony\lib\controller\default\templates/defaultLayout.php"
+Sep 09 11:14:30 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 09 11:14:30 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 09 11:14:30 symfony [info] {sfWebDebugLogger} Configuration 73.00 ms (13)
+Sep 09 11:14:30 symfony [info] {sfWebDebugLogger} Factories 193.01 ms (1)
+Sep 09 11:14:30 symfony [info] {sfWebDebugLogger} Action "job/index" 38.00 ms (1)
+Sep 09 11:14:30 symfony [info] {sfWebDebugLogger} Action "default/module" 0.00 ms (1)
+Sep 09 11:14:30 symfony [info] {sfWebDebugLogger} View "Success" for "default/module" 19.00 ms (1)
+Sep 09 11:14:30 symfony [info] {sfWebResponse} Send content (32116 o)

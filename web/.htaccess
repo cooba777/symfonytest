@@ -1,0 +1,63 @@
+Satisfy any
+
+php_value post_max_size 50M
+php_value upload_max_filesize 50M
+Options +FollowSymLinks +ExecCGI
+
+<ifModule mod_headers.c>
+#    # 1 YEAR
+#    <filesMatch "\.(ico|pdf|flv)$">
+#    Header set Cache-Control "max-age=29030400, public"
+#    </filesMatch>
+    # 1 WEEK
+    <filesMatch "\.(jpg|jpeg|png|gif|swf)$">
+    Header set Cache-Control "max-age=604801, public"
+    </filesMatch>
+    # 2 DAYS
+    <filesMatch "\.(xml|txt|css|js)$">
+    Header set Cache-Control "max-age=604801, proxy-revalidate"
+    </filesMatch>
+#    # 45 MIN
+#    <filesMatch "\.(html|htm|php)$">
+#    Header set Cache-Control "max-age=2700, private, proxy-revalidate"
+#    </filesMatch>
+</ifModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # uncomment the following line, if you are having trouble
+  # getting no_script_name to work
+  # RewriteBase /
+
+  # we skip all files with .something
+  #RewriteCond %{REQUEST_URI} \..+$
+  #RewriteCond %{REQUEST_URI} !\.html$
+  #RewriteRule .* - [L]
+
+
+  RewriteRule assets/img/opt/(.*) /img-gen-primary/$1 [L]
+
+  RewriteRule assets/img/(.*) /uploads/storage/$1 [L]
+
+  RewriteRule assets/movie/(.*) /uploads/storage/$1 [L]
+
+  # we check if the .html version is here (caching)
+  RewriteRule ^$ index.html [QSA]
+  RewriteRule ^([^.]+)$ $1.html [QSA]
+
+  #RewriteCond %{REQUEST_URI} ^/web/administrator_dev/?
+  RewriteCond %{REQUEST_URI} ^/web/administrator_dev/?
+  RewriteRule ^(.*)$ backend_dev.php [QSA,L]
+
+  #RewriteCond %{REQUEST_URI} ^/administrator/?
+  RewriteCond %{REQUEST_URI} ^/web/administrator/?
+  RewriteRule ^(.*)$ backend.php [QSA,L]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+
+  # no, so we redirect to our front web controller
+  RewriteRule ^(.*)$ index.php [QSA,L]
+
+
+</IfModule>
